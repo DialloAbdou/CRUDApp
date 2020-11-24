@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using CRUDApp.Model;
+using CRUDApp.Models;
 
 namespace CRUDApp.Repository
 {
