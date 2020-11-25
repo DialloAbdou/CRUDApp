@@ -20,16 +20,10 @@ namespace CRUDApp.Controllers
         // GET: Personne
         public ActionResult List()
         {
-            var personnesViewModels = new PersonneViewModel();
+            var personnesViewModels = new PersonneListViewModel();
             personnesViewModels.Personnes = _personneRepository.GetAllPersonne();
-
             return View(personnesViewModels);
         }
-
-
-     
-
-    
 
       
     }

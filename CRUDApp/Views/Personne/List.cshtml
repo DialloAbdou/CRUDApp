@@ -1,0 +1,36 @@
+﻿@model PersonneListViewModel
+
+    <div class="container">
+
+        <h1 class="text-center">Liste des Personnes</h1>
+        <table class="table table-striped">
+            <thead class="table-bordered table-primary">
+                <tr>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Prenom</th>
+                    <th scope="col">Adresse</th>
+                    <th scope="col">Code Postal</th>
+                    <th scope="col">Ville</th>
+                    <th scope="col">Mail</th>
+                    <td scope="col">Téléphone</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var p in Model.Personnes)
+                {
+                <tr>
+                    <td scope="row">@p.Nom</td>
+                    <td>@p.Prenom</td>
+                    <td>@p.Adresse</td>
+                    <td>@p.CodePostal</td>
+                    <td>@p.Ville</td>
+                    <td>@p.Mail</td>
+                    <td>@p.Telephone</td>
+                    <td><button class="btn btn-warning">Modif</button></td>
+                    <td><button class="btn btn-danger">Supp</button></td>
+                </tr>
+                 }
+            </tbody>
+        </table>
+
+    </div>

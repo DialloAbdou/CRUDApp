@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace CRUDApp.ViewModels
 {
-    public class PersonneViewModel              
+    public class PersonneListViewModel              
     {
-        public IEnumerable<Personne> Personnes { get; set; }
+        public IEnumerable<Personne>Personnes { get; set; }
     }
 }
