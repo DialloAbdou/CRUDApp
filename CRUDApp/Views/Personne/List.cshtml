@@ -26,7 +26,7 @@
                     <td>@p.Ville</td>
                     <td>@p.Mail</td>
                     <td>@p.Telephone</td>
-                    <td><button class="btn btn-warning">Modif</button></td>
+                    <td><button class="btn btn-warning" asp-controller="Personne" asp-action="Edit" asp-route-id="@p.PersonneId">Modif</button></td>
                     <td><button class="btn btn-danger">Supp</button></td>
                 </tr>
                  }

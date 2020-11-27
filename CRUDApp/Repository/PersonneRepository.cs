@@ -21,10 +21,27 @@ namespace CRUDApp.Repository
 
         public Personne GetPersonne(int id)
         {
+          
             return _crudDbContext.Personnes.FirstOrDefault(p => p.PersonneId == id);
-
         }
 
-      
+
+        public void UpdatePersonne(Personne p)
+        {
+            var personne = _crudDbContext.Personnes.FirstOrDefault(pers => pers.PersonneId == p.PersonneId);
+            if(personne != null)
+            {
+                personne.Nom = p.Nom;
+                personne.Prenom = p.Prenom;
+                personne.Adresse = p.Adresse;
+                personne.CodePostal = p.CodePostal;
+                personne.Ville = p.Ville;
+                personne.Telephone = p.Telephone;
+                personne.Mail = p.Mail;
+            }
+            _crudDbContext.SaveChanges();
+           
+        }
+
     }
 }

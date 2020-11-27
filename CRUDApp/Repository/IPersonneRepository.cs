@@ -10,6 +10,9 @@ namespace CRUDApp.Repository
    {
          IEnumerable<Personne> GetAllPersonne();
          Personne GetPersonne(int id);
+        void UpdatePersonne(Personne p);
+
+
    
    }
 }
