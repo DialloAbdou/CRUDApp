@@ -5,7 +5,7 @@
         <h1 class="text-center">Liste des Personnes</h1>
         <table class="table table-striped">
             <thead class="table-bordered table-primary">
-                <tr>
+                <tr class="text-center">
                     <th scope="col">Nom</th>
                     <th scope="col">Prenom</th>
                     <th scope="col">Adresse</th>
@@ -13,6 +13,8 @@
                     <th scope="col">Ville</th>
                     <th scope="col">Mail</th>
                     <td scope="col">Téléphone</td>
+                    <td colspan="2">Action</td>
+
                 </tr>
             </thead>
             <tbody>
@@ -26,8 +28,10 @@
                     <td>@p.Ville</td>
                     <td>@p.Mail</td>
                     <td>@p.Telephone</td>
-                    <td><button class="btn btn-warning" asp-controller="Personne" asp-action="Edit" asp-route-id="@p.PersonneId">Modif</button></td>
-                    <td><button class="btn btn-danger">Supp</button></td>
+                    <td><a class="btn btn-warning" asp-controller="Personne" asp-action="Edit" asp-route-pId="@p.PersonneId">Modifier</a></td>
+                    <td><a class="btn btn-danger">Supprimer</a></td>
+                    @*<td><button class="btn btn-warning" asp-controller="Personne" asp-action="Edit" asp-route-id="@p.PersonneId">Modif</button></td>*@
+                    @*<td><button class="btn btn-danger">Supp</button></td>*@
                 </tr>
                  }
             </tbody>

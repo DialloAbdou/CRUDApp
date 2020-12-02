@@ -27,9 +27,9 @@ namespace CRUDApp.Controllers
         }
 
         [HttpGet]   
-        public ActionResult Edit(int id)
+        public ActionResult Edit(int pId)
         {
-            var personne = _personneRepository.GetPersonne(id);
+            var personne = _personneRepository.GetPersonne(pId);
 
             return View(personne);
         }

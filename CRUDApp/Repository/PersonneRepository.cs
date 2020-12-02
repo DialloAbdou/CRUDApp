@@ -19,10 +19,10 @@ namespace CRUDApp.Repository
             return _crudDbContext.Personnes;
         }
 
-        public Personne GetPersonne(int id)
+        public Personne GetPersonne(int pId)
         {
           
-            return _crudDbContext.Personnes.FirstOrDefault(p => p.PersonneId == id);
+            return _crudDbContext.Personnes.FirstOrDefault(p => p.PersonneId == pId);
         }
 
 

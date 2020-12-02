@@ -9,7 +9,7 @@ namespace CRUDApp.Models
     public class Personne
     {
         [Key]
-        public int PersonneId { get; set; }
+        public int PersonneId  { get; set; }
         public string Nom { get; set; }
         public string Prenom { get; set; }
         public string Adresse { get; set; }
