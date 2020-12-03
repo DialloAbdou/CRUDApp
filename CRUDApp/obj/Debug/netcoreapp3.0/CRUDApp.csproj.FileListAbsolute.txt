@@ -142,3 +142,4 @@ E:\AspNet2020\CRUDApp\CRUDApp\obj\Debug\netcoreapp3.0\CRUDApp.Views.pdb
 E:\AspNet2020\CRUDApp\CRUDApp\obj\Debug\netcoreapp3.0\CRUDApp.csproj.CopyComplete
 E:\AspNet2020\CRUDApp\CRUDApp\obj\Debug\netcoreapp3.0\CRUDApp.dll
 E:\AspNet2020\CRUDApp\CRUDApp\obj\Debug\netcoreapp3.0\CRUDApp.pdb
+E:\AspNet2020\CRUDApp\CRUDApp\obj\Debug\netcoreapp3.0\CRUDApp.csprojAssemblyReference.cache

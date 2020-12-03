@@ -14,14 +14,32 @@ namespace CRUDApp.Repository
             _crudDbContext = crudDbContext;
 
         }
+
+        public void AddPersonne(Personne p)
+        {
+            var id = _crudDbContext.Personnes.Max(p => p.PersonneId);
+            var personne = new Personne
+            {
+                PersonneId = id + 1,
+                Nom = p.Nom,
+                Prenom = p.Prenom,
+                Adresse = p.Adresse,
+                CodePostal = p.CodePostal,
+                Ville = p.Ville,
+                Mail = p.Mail,
+                Telephone = p.Telephone
+            };
+            _crudDbContext.Add(personne);
+            _crudDbContext.SaveChanges();
+        }
+
         public IEnumerable<Personne> GetAllPersonne()
         {
             return _crudDbContext.Personnes;
         }
 
-        public Personne GetPersonne(int pId)
+        public Personne GetPersonne(int? pId)
         {
-          
             return _crudDbContext.Personnes.FirstOrDefault(p => p.PersonneId == pId);
         }
 
@@ -29,7 +47,7 @@ namespace CRUDApp.Repository
         public void UpdatePersonne(Personne p)
         {
             var personne = _crudDbContext.Personnes.FirstOrDefault(pers => pers.PersonneId == p.PersonneId);
-            if(personne != null)
+            if (personne != null)
             {
                 personne.Nom = p.Nom;
                 personne.Prenom = p.Prenom;
@@ -40,7 +58,7 @@ namespace CRUDApp.Repository
                 personne.Mail = p.Mail;
             }
             _crudDbContext.SaveChanges();
-           
+
         }
 
     }

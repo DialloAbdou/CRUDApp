@@ -9,8 +9,9 @@ namespace CRUDApp.Repository
    public interface IPersonneRepository
    {
          IEnumerable<Personne> GetAllPersonne();
-         Personne GetPersonne(int id);
+         Personne GetPersonne(int ? id);
         void UpdatePersonne(Personne p);
+        void AddPersonne(Personne p);
 
 
    

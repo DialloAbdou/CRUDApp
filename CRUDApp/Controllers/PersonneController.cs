@@ -27,23 +27,37 @@ namespace CRUDApp.Controllers
         }
 
         [HttpGet]   
-        public ActionResult Edit(int pId)
+        public ActionResult Edit(int?  pId)
         {
-            var personne = _personneRepository.GetPersonne(pId);
+            if (pId.HasValue)
+            {
+              var personne = _personneRepository.GetPersonne(pId);
+                return View(personne);
 
-            return View(personne);
+            }
+
+            return View();
         }
         [HttpPost]
 
         public ActionResult Edit(Personne personne)
         {
-            if(personne != null)
+            if(!ModelState.IsValid)
+            {
+                return View(personne);
+            }
+            if(personne.PersonneId.HasValue)
             {
                 _personneRepository.UpdatePersonne(personne);
 
                 return RedirectToAction("List");
             }
-            return NotFound();
+            else
+            {
+                _personneRepository.AddPersonne(personne);
+                return RedirectToAction("List");
+            }
+          
         }
 
 

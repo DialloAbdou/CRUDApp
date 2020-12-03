@@ -14,7 +14,6 @@
                     <th scope="col">Mail</th>
                     <td scope="col">Téléphone</td>
                     <td colspan="2">Action</td>
-
                 </tr>
             </thead>
             <tbody>
@@ -30,11 +29,12 @@
                     <td>@p.Telephone</td>
                     <td><a class="btn btn-warning" asp-controller="Personne" asp-action="Edit" asp-route-pId="@p.PersonneId">Modifier</a></td>
                     <td><a class="btn btn-danger">Supprimer</a></td>
-                    @*<td><button class="btn btn-warning" asp-controller="Personne" asp-action="Edit" asp-route-id="@p.PersonneId">Modif</button></td>*@
-                    @*<td><button class="btn btn-danger">Supp</button></td>*@
                 </tr>
                  }
             </tbody>
         </table>
+         <p>
+             <a class="btn btn-primary w-100" asp-controller="Personne" asp-action="Edit"> Ajouter</a>
+         </p>
 
     </div>
