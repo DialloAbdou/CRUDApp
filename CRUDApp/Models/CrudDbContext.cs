@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CRUDApp.Models
 {
-    public class CrudDbContext : DbContext
+    public class    CrudDbContext : DbContext
     {
         public CrudDbContext(DbContextOptions<CrudDbContext> options):base(options)
         {

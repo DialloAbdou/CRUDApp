@@ -20,7 +20,7 @@ namespace CRUDApp.Repository
             var id = _crudDbContext.Personnes.Max(p => p.PersonneId);
             var personne = new Personne
             {
-                PersonneId = id + 1,
+                //PersonneId = id + 1,
                 Nom = p.Nom,
                 Prenom = p.Prenom,
                 Adresse = p.Adresse,
