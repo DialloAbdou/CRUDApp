@@ -11,7 +11,14 @@ namespace CRUDApp.Models
         public CrudDbContext(DbContextOptions<CrudDbContext> options):base(options)
         {
         }
+ 
+
         public DbSet<Personne> Personnes { get; set; }
+        public DbSet<Sondage> Sondages { get; set; }
+        public DbSet<Resto> Restos { get; set; }
+        public DbSet<Vote> Votes { get; set; }
+
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
